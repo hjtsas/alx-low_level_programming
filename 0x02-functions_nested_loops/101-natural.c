@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*
 * File: 101-natural.c
 * Auth: vincent kip

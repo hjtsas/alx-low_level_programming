@@ -5,17 +5,17 @@
 */
 void print_number(int n)
 {
-	unsigned int n1;
+	unsigned int i;
 
 	if (n < 0)
 	{
-		n1 = -n;
+		i = -n;
 		_putchar('-');
 	} else
-		n1 = n;
-	if (n1 / 10)
+		i = n;
+	if (i / 10)
 	{
-		print_number(n1 / 10);
+		print_number(i / 10);
 	}
-	_putchar((n1 % 10) + '0');
+	_putchar((i % 10) + '0');
 }

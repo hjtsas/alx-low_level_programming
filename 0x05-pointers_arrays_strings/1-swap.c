@@ -10,11 +10,7 @@
 
 void swap_int(int *a, int *b)
 {
-	int x, y;
-
-	x = y;
-	y = temp;
-
-	_putchar('x = %d, y =%d\n', x, y);
-	return(0);
+	int temp = *a;
+	*a = *b;
+	*b = temp;
 }

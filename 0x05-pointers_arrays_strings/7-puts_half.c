@@ -3,12 +3,13 @@
 /**
  * puts_half - print half of a string
  * @str: string
- * return: ha;f of the string
+ * if odd len, n = (length_of_the_string - 1) / 2
+ * return: half of the string
  */
 
 void puts_half(char *str)
 {
-	int a, n, i;
+	int a, n, i, longi;
 
 	longi = 0;
 

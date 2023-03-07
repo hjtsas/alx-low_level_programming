@@ -3,21 +3,20 @@
 
 /**
  * print_chessboard - prints the chessbored
- * @a: size of the bored
- * Retur: Always 0
+ * @a: array
+ * Return: Always 0
  */
 
 void print_chessboard(char (*a)[8])
 {
 	int i, j;
 
-	for (i = 0; i <= a; i++)
+	for (i = 0; i < 8; i++)
 	{
-		for (j = 0; j <= a; j++)
+		for (j = 0; j < 8; j++)
 		{
-			_putchar('#');
+			putchar(a[i][j]);
 		}
-		_putchar('\n');
+		putchar('\n');
 	}
-	return (0);
 }

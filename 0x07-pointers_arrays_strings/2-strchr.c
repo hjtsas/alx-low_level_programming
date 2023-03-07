@@ -5,15 +5,17 @@
  * _strchr - locate a character in string
  * @c: character
  * @s: string
- * Return 0
+ * Return: Always 0 (Success)
  */
 
 char *_strchr(char *s, char c)
 {
-	int a;
-	for (a = 0, a < '\0', a++)
+	int a = 0;
+
+	for (; s[a] < '\0'; a++)
 	{
-		s[a] == c;
+		if (s[a] == c)
+			return (&s[a]);
 	}
-	return ('\0');
+	return (0);
 }

@@ -1,9 +1,10 @@
+#include <stdlib.h>
 #include "main.h"
 
 /**
  * malloc_checked - allocates memory using malloc
  * @b: number of memory
- * Return: void
+ * Return: p or 98
  */
 
 void *malloc_checked(unsigned int b)

@@ -1,10 +1,10 @@
 #include <stdlib.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
  * malloc_checked - allocates memory using malloc
  * @b: number of memory
- *
  * Return: (p) or 98 if check fails
  */
 

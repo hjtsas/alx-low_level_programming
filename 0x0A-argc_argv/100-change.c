@@ -28,10 +28,10 @@ int main(int argc, char *argv[])
 	}
 	for (j = 0; j < 5 && i >= 0; j++)
 	{
-		while (i >= cents[i])
+		while (i >= cents[j])
 		{
 			result++;
-			i -= cents[i];
+			i -= cents[j];
 		}
 	}
 	printf("%d\n", result);

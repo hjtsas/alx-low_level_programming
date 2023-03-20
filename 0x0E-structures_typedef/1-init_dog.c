@@ -3,13 +3,13 @@
 
 /**
  * int_dog - initialize a variable
- * @d: pointer tothe struct dog
+ * @d: pointer to the struct dog
  * @age: age
  * @name: name
  * @owner: owner
  */
 
-void int_dog(struct dog *d, char *name, float age, char *owner)
+void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	if (d == NULL)
 		d = malloc(sizeof(struct dog));

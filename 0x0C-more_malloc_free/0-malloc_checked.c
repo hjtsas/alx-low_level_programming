@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * malloc_checked - allocates memory using malloc
+ * *malloc_checked - allocates memory using malloc
  * @b: number of memory
  * Return: (p) or 98 if check fails
  */

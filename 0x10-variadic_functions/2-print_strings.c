@@ -1,13 +1,13 @@
 #include "variadic_functions.h"
 
 /**
- * print_numbers - print numbers
+ * print_strings - print numbers
  * @separator: string to be printed
  * @n: number of integers
  * @....: variable numbers
  */
 
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list x;
 	unsigned int i;
@@ -25,5 +25,4 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			printf("%s", separator);
 	}
 	printf("\n");
-	va_end(x);
 }

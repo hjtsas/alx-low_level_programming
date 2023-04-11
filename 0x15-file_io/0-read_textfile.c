@@ -9,25 +9,27 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *fp;
-	char *line = NULL;
-	size_t len = 0;
-	ssize_t read;
-	ssize_t total_read = 0;
+	int fd;
+	ssize_t n_read;
+	char *buf;
 
 	if (filename == NULL)
 		return (0);
-	fp = fopen(filename, "r");
-	if (fp == NULL)
+	fd = open(filename, O_RDONLY);
+	if (fd == -1)
 		return (0);
-	while ((read = getline(&line, &len, fp))
-			!= -1 && total_read + read <= letters)
+	buf = malloc(sizeof(char) * letters);
+	if (buf == NULL)
+		return (0);
+	n_read = read(fd, buf, letters);
+	if (n_read == -1)
 	{
-		printf("%s", line);
-		total_read += read;
+		free(buf);
+		close(fd);
+		return (0);
 	}
-	fclose(fp);
-	if (line)
-		free(line);
-	return (total_read);
+	write(STDOUT_FILENO, buf, n_read);
+	free(buf);
+	close(fd);
+	return (n_read);
 }

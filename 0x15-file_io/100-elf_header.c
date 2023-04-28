@@ -3,18 +3,24 @@
 #include <string.h>
 
 #define MAX_COMMAND_LENGTH 1024
+/**
+ * main - excute program
+ * Returns: 0
+ */
 
 int main(int argc, char **argv)
 {
 	char command[MAX_COMMAND_LENGTH];
 	char *filename = argv[1];
 
-	snprintf(command, MAX_COMMAND_LENGTH, "readelf -h %s", filename);
+	snprintf(command, MAX_COMMAND_LENGTH,
+			"readelf -h %s", filename);
 	FILE *fp = popen(command, "r");
 
 	if (fp == NULL)
 	{
-		fprintf(stderr, "Failed to execute command: %s\n", command);
+		fprintf(stderr, "Failed to execute command:
+				%s\n", command);
 		exit(98);
 	}
 	char line[1024];
@@ -58,8 +64,9 @@ int main(int argc, char **argv)
 
 	if (status != 0)
 	{
-		fprintf(stderr, "Command failed with status %d: %s\n", status, command);
+		fprintf(stderr, "Command failed with status %d:
+				%s\n", status, command);
 		exit(98);
 	}
-	return 0;
+	return (0);
 }
